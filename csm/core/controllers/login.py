@@ -71,6 +71,7 @@ class LogoutView(CsmView):
         return CsmResponse()
 
 # @CsmView._app_routes.view("/api/v1/hello") 31169
+@CsmAuth.public
 @CsmView._app_routes.view("/api/v2/hello")
 class HelloWorldView(CsmView):
 
