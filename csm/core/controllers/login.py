@@ -69,3 +69,10 @@ class LogoutView(CsmView):
         # TODO: Stop any websocket connection corresponding to this session
         Log.info(f"user_id: {self.request.session.credentials.user_id} successfully logged out")
         return CsmResponse()
+
+@CsmView._app_routes.view("/api/v1/hello")
+@CsmView._app_routes.view("/api/v2/hello")
+class HelloWorldView(CsmView):
+
+    async def get(self):
+        return CsmResponse(text='Hello World')
