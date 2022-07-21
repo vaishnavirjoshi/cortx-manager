@@ -76,4 +76,4 @@ class LogoutView(CsmView):
 class HelloWorldView(CsmView):
 
     async def get(self):
-        return CsmResponse()
+        return CsmResponse("hello world")
