@@ -180,6 +180,7 @@ fi
 pip uninstall -y numpy
 pip install numpy --no-binary :all:
 
+pip install -r "$CORTX_PATH/requirements.txt"
 ENV_END_TIME=$(date +%s)
 
 ################### Backend ##############################
